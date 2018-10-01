@@ -255,6 +255,12 @@ footer {
  }
 
  @media only screen and (max-width: 420px) {
+     header {
+         margin: 0 0 0 12%;
+     }
+    header img {
+        width: 310px;
+    }
     canvas {
         margin-left: -50px;
         display: block;
