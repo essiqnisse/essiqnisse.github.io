@@ -1,0 +1,263 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+    background-color: white;
+    background: url("../res/clouds_dramatic.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding : 0;
+
+    /* background stretch fix for older IE versions */
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../res/clouds_dramatic.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../res/clouds_dramatic.jpg', sizingMethod='scale')";
+
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #BF9959;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+}
+
+/* normal header height*/
+header {
+    height: 80px;
+    margin: 3% 10% 0 10%;
+}
+
+header img {
+    width: 22em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+canvas {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 800px;
+}
+
+#boxContainer {
+    display: flex;
+    margin: 0 10% 0 10%;
+    position: absolute;
+    bottom: 22%;
+    left: 0px;
+}
+
+.textBox {
+    border-radius: 2.5%;
+    flex-direction: row;
+    background-color: white;
+    padding: 16px;
+    margin: 16px;
+    width: 33%;
+}
+
+.textBox h2{
+    font-size: 1.45em;
+    letter-spacing: .35rem;
+    text-transform: uppercase;
+}
+
+.textBox p{
+    font-family: 'EB Garamond', serif;
+    font-size: 1em;
+    line-height: 1.4em;
+    padding-top: 0.5em;
+}
+
+.textBox img {
+    width: 56px;
+    vertical-align: middle;
+    margin-top: 10px;
+    clear: both;
+}
+
+.leg {
+    display: block;
+    float: left;
+    height: 100%;
+}
+
+#social {
+    margin: 10px 10% 20px 0;
+    width: 275px;
+    height: 30px;
+    float: right;
+    position: absolute;
+    bottom: 14%;
+    right: 0px;
+}
+
+#social span {
+    display: inline;
+    
+}
+
+#social img {
+    width: 42px;
+    height: 42px;    
+    padding: 5px;
+    vertical-align: middle;
+}
+
+footer {
+    clear: both;
+}
+
+/* fixing smaller screen widths/mobile
+ */
+ @media only screen and (max-width: 1000px) {
+
+    body {
+        font-family: 'Open Sans', sans-serif;
+        color: #BF9959;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 24px;
+    }
+
+    header {
+        /* width: 75%; */
+        height: 100px;
+    }
+
+    header img {
+        /* position: absolute;
+        top: 32px; left: 32px; */
+        /* width: 70%; */
+    }
+
+    #boxContainer {
+        display: block;
+        position: static;
+    }
+
+    .textBox {
+        border-radius: 2.5%;
+        display: block;
+        padding: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    /* fix so that images sit correctly with smaller size */
+    .textBox:last-child {
+        height: 200px;
+    }
+    .textBox:first-child {
+        margin-top: 55px;
+    }
+
+    #social {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 60px;
+        clear: both;
+        text-align: center;
+        position: static;
+    }
+    
+    #social span {
+        display: inline;
+        
+    }
+    
+    #social img {
+        width: 42px;
+        height: 42px;    
+        padding:5px;
+        vertical-align: middle;
+    }
+    
+    canvas {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 10%;
+        display: block;
+        width: 800px;
+    }
+
+    .textBox img {
+        width: 70px;
+        vertical-align: middle;
+        margin-top: 10px;
+        clear: both;
+    }
+ }
+ @media only screen and (max-width: 700px) {
+    canvas {
+        margin-left: -35px;
+        display: block;
+        width: 700px;
+    }
+ }
+
+ @media only screen and (max-width: 550px) {
+    canvas {
+        margin-left: -75px;
+        display: block;
+        width: 700px;
+    }
+ }
+
+ @media only screen and (max-width: 420px) {
+    canvas {
+        margin-left: -125px;
+        display: block;
+        width: 700px;
+    }
+} 

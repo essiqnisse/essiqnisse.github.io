@@ -1,1 +1,100 @@
-hello
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fourwise</title>
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+    <link rel="shortcut icon" type="image/png" href="res/icon.png"/>
+  </head>
+
+  <body>
+    <header id="header">
+      <img src="res/Fourwiseheader.png" alt="">
+    </header>
+
+    <main>
+          <div id="canvasContainer">
+              <canvas width="800" height="300" id="tagCloud">
+                  <ul id="tags">
+                      <li><a href="https://essiq.se/"><img class="cloudIMG"src="res/essiq.png"></a></li>
+                      <li><a href="http://www.inviatech.se/"><img class="cloudIMG" src="res/inviatech.png"></a></li>
+                      <li><a href="http://www.netgroup.se/"><img class="cloudIMG" src="res/netgroup.png"></a></li>
+                      <li><a href="http://www.solros.com/"><img class="cloudIMG" src="res/solros_logo.PNG"></a></li>
+                      <li><a href="#"><img class="cloudIMG" src="res/yourcompany.PNG"></a></li>
+                  </ul>
+              </canvas>
+          </div>
+          <div id="boxContainer">
+            <div class="textBox">
+              <h2>Om Fourwise</h2>
+              <p class="desc">Fourwise är ett investment-bolag som grundades 2015 med huvudkontor i Göteborg. <br><br>Fourwise skiljer sig från andra investmentbolag då vi tillhandahåller både kompetens för att utveckla produkter och tjänster men även kapital. </p>
+            </div>
+            <div class="textBox">
+              <h2>Varför oss?</h2>
+              <p class="desc">Fourwise vill vara en coachande partner som kan ta ert bolag till en helt ny nivå. Istället för att förändra bolag satsar vi mer på vidareutveckling och förädling. </p>
+            </div>
+            <div class="textBox">
+              <h2>Hög legitimitet</h2>
+              
+              <p>Dotterbolaget ESSIQ har under flera år fått utnämningen Di Gasell av Dagens Industri: 2014, 2015, 2016 och 2017.</p>
+                <div class="leg">
+                    <img src="res/AAA.png" alt="">
+                    <img src="res/gasell.jpg" alt="">
+                    <img src="res/superf.jpeg" alt="">
+                </div>
+            </div>
+          </div>
+          <div id="social">
+            <span>Kontakta oss: </span>
+            <a href=""><img id="s_linkedin" src="res/social/linkedin.png" alt="linkedin" onmouseover="this.src='res/social/linkedin_hover.png'" onmouseout="this.src='res/social/linkedin.png'"></a>
+            <a href=""><img id="s_phone" src="res/social/phone.png" alt="phone" onmouseover="this.src='res/social/phone_hover.png'" onmouseout="this.src='res/social/phone.png'"></a>
+            <a href=""><img id="s_mail" src="res/social/mail.png" alt="mail" onmouseover="this.src='res/social/mail_hover.png'" onmouseout="this.src='res/social/mail.png'"></a>
+          </div>
+
+          <!-- <div class="cta">
+            <a href="#">Contact us</a>
+          </div> -->
+    </main>
+    
+    <footer>
+      <!-- eventuellt copyright -->
+    </footer>
+
+    <script src="js/tagCloud.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        try {
+          // Set parameters for tagCloud
+          TagCanvas.textColour = '#000000';
+          TagCanvas.outlineColour = '#ff9999';
+          TagCanvas.centreImage = "res/fourwisesmall.png";
+          TagCanvas.imageMode = "image";
+          TagCanvas.imageScale = 0.35;
+          TagCanvas.fadeIn = 300;
+          TagCanvas.radiusX = 1;
+          TagCanvas.radiusY = 1;
+          TagCanvas.radiusZ = 1;
+          TagCanvas.maxSpeed = 0.12;
+          TagCanvas.wheelZoom = false;
+          TagCanvas.stretchX = 1.2;
+          TagCanvas.stretchY = 1;
+          //TagCanvas.dragControl = true;
+          TagCanvas.freezeDecel = true;
+
+          TagCanvas.initial = [0.035,0.035];
+          //TagCanvas.clickToFront = 400;
+          TagCanvas.freezeActive = true;
+
+          //start rollin'
+          TagCanvas.Start('tagCloud');
+        } catch(e) {
+          // something went wrong, hide the canvas container
+          document.getElementById('CanvasContainer').style.display = 'none';
+        }
+      };
+    
+     </script>
+    
+  </body>
+</html>
